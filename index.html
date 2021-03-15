@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parse &lt;table&gt; to JSON</title>
+
+  <!-- normalize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- js -->
+  <!-- set parse function here -->
+  <script src="./js/parseFunc.js"></script>
+
+  <script src="./js/convert.js"></script>
+  <script src="./js/clear.js"></script>
+  <script src="./js/clip.js"></script>
+  <script src="./js/debug.js"></script>
+</head>
+<body>
+  <h1>Parse &lt;table&gt; to JSON</h1>
+  <div id="wrapper">
+    <section>
+      <textarea 
+        id="input-field" 
+        rows="26"
+        spellcheck="false"
+      ></textarea>
+      <div>
+        <button id="debug-button" onclick="initDebug()" >Insert Example</button>
+        <button id="clear-button" onclick="clearTA()" >Clear</button>
+
+        <!-- set parse function here -->
+        <button id="parse-button" onclick="convertTA(tableParseJson)" >Parse</button>
+      </div>
+    </section>
+
+    <section>
+      <textarea 
+        id="output-field" 
+        rows="26"
+        spellcheck="false"
+      ></textarea>
+      <button id="clip-button" onclick="clip()" >Copy to ClipBoard</button>
+    </section>
+  </div>
+</body>
+</html>
