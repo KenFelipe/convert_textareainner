@@ -1,0 +1,21 @@
+{
+  "name": "parseTableData",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel --watch src/js -d public/js",
+    "sass": "sass --watch src/scss:public/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

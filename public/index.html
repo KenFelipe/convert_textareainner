@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parse &lt;table&gt; to JSON</title>
+
+  <!-- normalize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- js -->
+  <script src="./js/parse.js"></script>
+</head>
+<body>
+  <h1>TEST</h1>
+  <div id="wrapper">
+
+    <section>
+      <textarea 
+        id="input-field" 
+        rows="26"
+      ></textarea>
+      <button
+        onclick="parseTable()"
+      >Parse</button>
+    </section>
+
+    <section>
+      <textarea 
+        id="output-field" 
+        rows="26"
+      ></textarea>
+    </section>
+
+  </div>
+
+  <script src="./js/initDebug.js"></script>
+  <script>initDebug()</script>
+</body>
+</html>
