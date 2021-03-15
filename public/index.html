@@ -13,32 +13,40 @@
   <link rel="stylesheet" href="./css/main.css">
 
   <!-- js -->
-  <script src="./js/parse.js"></script>
+  <!-- set parse function here -->
+  <script src="./js/parseFunc.js"></script>
+
+  <script src="./js/convert.js"></script>
+  <script src="./js/clear.js"></script>
+  <script src="./js/clip.js"></script>
+  <script src="./js/debug.js"></script>
 </head>
 <body>
-  <h1>TEST</h1>
+  <h1>Parse &lt;table&gt; to JSON</h1>
   <div id="wrapper">
-
     <section>
       <textarea 
         id="input-field" 
         rows="26"
+        spellcheck="false"
       ></textarea>
-      <button
-        onclick="parseTable()"
-      >Parse</button>
+      <div>
+        <button id="debug-button" onclick="initDebug()" >Insert Example</button>
+        <button id="clear-button" onclick="clearTA()" >Clear</button>
+
+        <!-- set parse function here -->
+        <button id="parse-button" onclick="convertTA(tableParseJson)" >Parse</button>
+      </div>
     </section>
 
     <section>
       <textarea 
         id="output-field" 
         rows="26"
+        spellcheck="false"
       ></textarea>
+      <button id="clip-button" onclick="clip()" >Copy to ClipBoard</button>
     </section>
-
   </div>
-
-  <script src="./js/initDebug.js"></script>
-  <script>initDebug()</script>
 </body>
 </html>

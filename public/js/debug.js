@@ -1,9 +1,25 @@
 const initDebug = () => {
   const inputField = document.getElementById('input-field');
-  inputField.value = tableEx;
+  inputField.value = tableEx2;
 };
 
-const tableEx = `\
+const tableEx1 = `\
+<tbody>
+    <tr>
+        <td>Name</td>
+        <td>Salary</td>
+    </tr>
+    <tr>
+        <td>Ramesh Raman</td>
+        <td>5000</td>
+    </tr>
+    <tr>
+        <td>Shabbir Hussein</td>
+        <td>7000</td>
+    </tr>
+</tbody>\
+`;
+const tableEx2 = `\
 <tbody id="tableEx">
     <tr>
         <td>R$55.000,00</td>

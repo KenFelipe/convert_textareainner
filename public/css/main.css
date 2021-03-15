@@ -1,16 +1,18 @@
 * {
   box-sizing: border-box;
+  font-family: "Times New Roman", "Open Sans", sans-serif;
 }
 *:focus {
   outline: none;
 }
 
-textarea {
-  resize: none;
-}
-
 body {
   padding: 20px;
+  padding-bottom: 80px;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 #wrapper {
@@ -18,27 +20,59 @@ body {
   justify-content: space-between;
   gap: 20px;
 }
+@media (max-width: 640px) {
+  #wrapper {
+    flex-direction: column;
+    gap: 56px;
+  }
+}
 #wrapper section {
+  width: 50%;
   flex-grow: 1;
-  text-align: right;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  #wrapper section {
+    width: 100%;
+  }
 }
 #wrapper textarea {
+  resize: none;
   display: block;
   width: 100%;
   padding: 8px;
+  border: 1px solid #767676;
+  border-radius: 5px;
+}
+#wrapper textarea:focus {
+  outline: none;
+}
+#wrapper div {
+  display: flex;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+#wrapper div button {
+  flex-grow: 1;
+  margin: 0;
+}
+#wrapper div button#debug-button {
+  flex-grow: 2;
 }
 
 button {
   cursor: pointer;
   color: #fff;
-  font-size: 1.25rem;
   margin-top: 16px;
+  font-size: 1.25rem;
+  line-height: 28px;
   padding: 10px 30px;
   background-color: #0083ba;
   border: 2px solid #0083ba;
   border-radius: 5px;
-  transition: all 0.3s ease;
-  transition: transform 0.1s ease;
+  transition: all 0.3s ease, transform 0.1s ease;
 }
 button:hover {
   color: #000;
