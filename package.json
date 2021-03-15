@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "babel": "babel --watch src/js -d public/js",
-    "sass": "sass --watch src/scss:public/css"
+    "sass": "sass --watch src/scss:public/css",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "@babel/cli": "^7.13.10",
     "@babel/core": "^7.13.10",
+    "gh-pages": "^3.1.0",
     "sass": "^1.32.8"
   },
   "dependencies": {
