@@ -1,5 +1,5 @@
 // parse func
-const tableParseJson = tableHtmlStr => {
+const parseTableToJson = tableHtmlStr => {
     const trRe = /<tr>.*?<\/tr>/gs
     const trs = tableHtmlStr.match(trRe)
 
@@ -16,9 +16,14 @@ const tableParseJson = tableHtmlStr => {
         return trtds
     })
 
-    // parse
+    // parse & format
     const tableParsed = JSON.stringify(tableArray)
-    console.log(tableParsed)
+        .replaceAll('[[', '\"body\": [\n[')
+        .replaceAll(']]', ']\n]')
+        .replaceAll('],', '],\n')
+        .replaceAll('[\"', '\t[\"')
+        .replaceAll('\",\"', '\", \"')
 
+    console.log(tableParsed)
     return tableParsed
 }

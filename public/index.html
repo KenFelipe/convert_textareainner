@@ -15,6 +15,12 @@
   <!-- js -->
   <!-- set parse function here -->
   <script src="./js/parseFunc.js"></script>
+  <script>
+    // is debug
+    const isDebug = true
+    // set parse function here 
+    const parseFunction = parseTableToJson
+  </script>
 
   <script src="./js/convert.js"></script>
   <script src="./js/clear.js"></script>
@@ -34,8 +40,7 @@
         <button id="debug-button" onclick="initDebug()" >Insert Example</button>
         <button id="clear-button" onclick="clearTA()" >Clear</button>
 
-        <!-- set parse function here -->
-        <button id="parse-button" onclick="convertTA(tableParseJson)" >Parse</button>
+        <button id="parse-button" onclick="convertTA()" >Parse</button>
       </div>
     </section>
 
@@ -48,5 +53,12 @@
       <button id="clip-button" onclick="clip()" >Copy to ClipBoard</button>
     </section>
   </div>
+
+  <script>
+    if(isDebug) {
+      document.getElementById('debug-button').click()
+      document.getElementById('parse-button').click()
+    }
+  </script>
 </body>
 </html>

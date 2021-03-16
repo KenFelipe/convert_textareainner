@@ -1,4 +1,7 @@
-const convertTA = parseFn => {
+const convertTA = () => {
+  // parse function
+  const parseFn = parseFunction; // set in html <script /> tag
+
   const inputField = document.getElementById('input-field');
   const inputValue = inputField.value; // console.log(inputValue)
   // convert
