@@ -1,6 +1,6 @@
 const convertTA = () => {
-    // parse function
-    const parseFn = parseFunction // set in html <script /> tag
+    // converter function
+    const converterFn = converterFunction // set in html <script /> tag
 
 
     const inputField = document.getElementById('input-field')
@@ -8,15 +8,15 @@ const convertTA = () => {
     // console.log(inputValue)
 
     // convert
-    const tryParse = (parseFn, inputValue) => {
+    const tryConverter = (converterFn, inputValue) => {
         try {
-            return parseFn(inputValue)
+            return converterFn(inputValue)
         } catch (error) {
             console.log('Error:', error)
             return 'Error'
         }
     }
-    const valueConverted = tryParse(parseFn, inputValue)
+    const valueConverted = tryConverter(converterFn, inputValue)
 
     // out 
     const outputField = document.getElementById('output-field')

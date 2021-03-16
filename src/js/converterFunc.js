@@ -1,5 +1,5 @@
 // parse func
-const parseTableToJson = tableHtmlStr => {
+const converterTableToJson = tableHtmlStr => {
     const trRe = /<tr>.*?<\/tr>/gs
     const trs = tableHtmlStr.match(trRe)
 
