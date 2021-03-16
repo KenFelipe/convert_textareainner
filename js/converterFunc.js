@@ -1,5 +1,5 @@
 // parse func
-const tableParseJson = tableHtmlStr => {
+const converterTableToJson = tableHtmlStr => {
   const trRe = /<tr>.*?<\/tr>/gs;
   const trs = tableHtmlStr.match(trRe); // console.log(trs)
   // trs.forEach(v => console.log(v))
@@ -11,9 +11,13 @@ const tableParseJson = tableHtmlStr => {
     // console.log(`${i}: ${trtds}\n`)
 
     return trtds;
-  }); // parse
+  }); //
 
-  const tableParsed = JSON.stringify(tableArray);
+  const isIndent = true;
+  const tabn = 4;
+  const indent = isIndent ? Array(tabn).fill(0).reduce(prev => prev + '\t', '') : ''; // parse & format
+
+  const tableParsed = JSON.stringify(tableArray).replaceAll(`[[`, `${indent}"body": [\n[`).replaceAll(`]]`, `]\n${indent}]`).replaceAll(`],`, `],\n`).replaceAll(`["`, `${indent + '\t'}["`).replaceAll(`","`, `", "`);
   console.log(tableParsed);
   return tableParsed;
 };
